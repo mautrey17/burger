@@ -1,0 +1,1 @@
+--create 3 initial entries to burgers
