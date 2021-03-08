@@ -11,11 +11,11 @@ const orm = {
         })
     },
 
-    insertOne(table, cols, values, cb) {
-        const queryString = `insert into ${table} (${cols.toString()}) values (?, ?)`;
+    insertOne(sqlArray, cb) {
+        const queryString = `insert into ?? (??, ??) values (?, ?)`;
         console.log(queryString);
 
-        connection.query(queryString, values, (err, result) => {
+        connection.query(queryString, sqlArray, (err, result) => {
             if(err)throw err;
             cb(result)
         })
