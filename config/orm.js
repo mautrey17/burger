@@ -12,11 +12,23 @@ const orm = {
     },
 
     insertOne(table, cols, values, cb) {
-        const queryString = `insert into ${table}`
+        const queryString = `insert into ${table} (${cols.toString()}) values (?, ?)`;
+        console.log(queryString);
+
+        connection.query(queryString, values, (err, result) => {
+            if(err)throw err;
+            cb(result)
+        })
     },
 
-    updateOne() {
+    updateOne(table, cols, condition, cb) {
+        const queryString = `update ${table} set ${cols} where ${condition}`
+        console.log(queryString);
 
+        connection.query(queryString, (err, result) => {
+            if(err)throw err;
+            cb(result);
+        })
     }
 }
 
