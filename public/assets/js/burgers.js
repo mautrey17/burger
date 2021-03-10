@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const devourerBtns = document.querySelectorAll(".eat-btn");
 
   if (devourerBtns) {
-    console.log("I exist");
     devourerBtns.forEach((btn) => {
       btn.addEventListener("click", (event) => {
         const id = event.target.getAttribute("data-id");
