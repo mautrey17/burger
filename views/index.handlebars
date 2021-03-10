@@ -3,8 +3,8 @@
         <h1>Burger Devourer!</h1>
     </header>
     <div class="container">
-        <div>
-            <img class="img" src="https://lh3.googleusercontent.com/proxy/QCmWye6ZEkjbd35u_zw6R1JPHMWEv51C0FKQCJAn_pj0HWpywni-XjqSOKWclbQFV0Ew5Oub-kt00pHcsE2y7i66YO2bBL3ViTSK" alt="uh oh">
+        <div class="img-holder mb-3">
+            <img class="main-img" src="/assets/img/burgerImg.png" alt="juicy burger">
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -33,7 +33,7 @@
         </div>
         <section class="mt-5 text-center">
                 <h2>Add a Burger</h2>
-                <form  id="new-burger-form" class="mt-3">
+                <form  id="new-burger-form" class="mt-3 mb-3">
                     <div class="form-group">
                         <label for="burger-name">Burger Name:</label> <br>
                         {{!-- <input type="text" id="burger-name" name="burger-name"> --}}
@@ -46,7 +46,6 @@
                       <button type="submit" class="btn btn-primary">Add a Burger</button>
 
                 </form>
-                <button id="test">test</button>
             </section>
     </div>
     <script src="/js/burgers.js"></script>

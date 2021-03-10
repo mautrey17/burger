@@ -1,0 +1,11 @@
+body{
+    background-color: #e1ad01;
+}
+
+
+.main-img{
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
