@@ -16,14 +16,8 @@ router.get('/', (req, res) => {
 
 })
 
-router.get('/api/burgers', (req, res) => {
-    burger.selectAll(burgerData => {
-        res.json(burgerData)
-    })
-})
-
 router.post('/api/burgers', (req, res) => {
-    res.end()
+    burger.insertOne(req.body.burger_name, req.body.devoured, () => res.redirect('/'))
 })
 
 router.put('/api/burgers/:id', (req, res) => {
