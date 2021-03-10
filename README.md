@@ -12,7 +12,7 @@
 6. [Questions](#Questions)
 
 ## Description
-This full stack web application allows users to create then devourburgers. A custom built ORM is used to update the MySQL database where the burgers are stored. Handlebars is used to dynamically generate the HTML page.
+This full stack web application allows users to create then devourburgers. A custom built ORM is used to update the MySQL database where the burgers are stored. Handlebars is used to dynamically generate the HTML page. Application is deployed at: https://burger-norm.herokuapp.com/
 
 ## Installation
 In order to install the application, follow these steps: 
