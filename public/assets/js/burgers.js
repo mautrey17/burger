@@ -3,12 +3,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       console.info('DOM loaded');
     }
 
-// fetch('/api/burgers').then((resp) => {
-//     return resp.json()
-// }).then((data) => {
-//     console.log(data)
-// });
-
 //create burger function
 const newBurgerForm = document.querySelector('#new-burger-form');
 
@@ -36,23 +30,39 @@ if(newBurgerForm) {
     })
 }
 
-const test32 = document.getElementById('test');
-console.log(test32)
+//devour burger
+const devourerBtns = document.querySelectorAll('.eat-btn');
 
-if(test32){
+
+if(devourerBtns){
     console.log('I exist')
-    test32.addEventListener('click', (event) => {
-        event.preventDefault();
+    devourerBtns.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const id = event.target.getAttribute('data-id');
+            const nowEaten = {
+                devoured: 1,
+            };
 
-        console.log('hi round 2');
-
-        // const newBurger = {
-        //     burger_name: document.querySelector('#burger-name').value.trim(),
-        //     devoured: document.querySelector('#uneaten').checked,
-        // };
-
-        
+            fetch(`/api/burgers/${id}`, {
+                method: 'PUT', 
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(nowEaten)
+            }).then(() => {
+                location.reload('/');
+            })
+    
+            // const newBurger = {
+            //     burger_name: document.querySelector('#burger-name').value.trim(),
+            //     devoured: document.querySelector('#uneaten').checked,
+            // };
+    
+            
+        })
     })
+    
 }
 
 });
