@@ -5,9 +5,11 @@ const connection = require('./connection.js');
 const orm = {
     selectAll(table, callback) {
         const queryString = `select * from ${table};`
+        console.log(table)
+        console.log(callback)
         connection.query(queryString, (err, burgerInfo) => {
             if(err){throw err};
-            callback(burgerInfo);
+            return callback(burgerInfo);
         })
     },
 
