@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 7777;
 
 const app = express();
 
-//establish static server
-
+//set up handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+//establish static server
 app.use(express.static('public'));
 
 //middleware

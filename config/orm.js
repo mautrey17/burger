@@ -1,5 +1,5 @@
 //made from scratch ORM
-//dependenncies
+//dependencies
 const connection = require('./connection.js');
 
 const orm = {

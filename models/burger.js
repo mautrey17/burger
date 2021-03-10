@@ -1,6 +1,7 @@
 //dependencies
 const orm = require('../config/orm.js');
 
+//object to hold updated methods from ORM
 const burger = {
     selectAll(cb) {
         orm.selectAll('burgers', (res) => cb(res))
